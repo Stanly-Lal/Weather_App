@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather report</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER PAFRT && LIGHT-DARK MODE################## -->
+    <header>
+        <h1>WEATHER APP</h1>
+        <div id="toggle-container">
+            <div class="light-mode"><i class="fa-solid fa-sun"></i></div>
+        </div>
+    </header>
+    <!-- REAL TIME AREA########################## -->
+    <div class="time-container">
+        <p id="current-time"></p>
+    </div>
+    <!-- MAIN CONTENT B0X PART STARTS############### -->
+    <div class="main-container">
+      <div class="secondry-container"> 
+        <div class="search-container">
+            <input type="text" id="input-value" placeholder="Enter your location here.....">
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </div>
+        <div class="content-container">
+            <div class="area-container">
+              <h2 class="hard-code" id="name"> Search location.... </h2>
+              <h2 class="hard-code" id="country"> </h2>
+            </div>
+            <div class="temp-time">
+                <p id="time">Time: .....</p>
+                <p id="temp">Temp: .....</p>
+            </div>
+            <div class="last-part">
+                <p id="text"> </p>
+                <img src="" id="icon">
+                <p id="day"></p>
+            </div>
+        </div>
+        <button id="gps">Use Current Location <i class="fa-solid fa-location-crosshairs"></i></button>  
+     </div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

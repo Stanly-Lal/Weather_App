@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER PART && DARK-LIGHT MODE ########################## */
+header{
+    width: 100vw;
+    height: 50px;
+    background-color: brown;
+    color: white;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+#toggle-container {
+    width: 80px;
+    height: 40px;
+    border: 1px solid grey;
+    background-color: rgb(232, 228, 228);
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+.light-mode {
+    width: 35px;
+    height: 35px;
+    border: 1px solid grey;
+    background-image: linear-gradient(to left, gray,rgb(108, 202, 237),silver,rgb(108, 202, 237));
+    transform: rotate(240deg);
+    border-radius: 100%;
+    position: absolute;
+    top: 1.49px;
+    left: 2px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 1.4rem;
+    color: rgb(250, 237, 0);
+    text-shadow: 1px 1px 5px orange , -1px -1px 5px orange ;
+    transition: all 0.5s ease-in-out;
+}
+.dark-mode {
+    width: 35px;
+    height: 35px;
+    border: 1px solid rgb(196, 195, 195);
+    background-image: linear-gradient(to right,black,purple,rgba(255, 0, 255, 0.812),rgb(145, 61, 75));
+    border-radius: 100%;
+    position: absolute;
+    top: 1.49px;
+    transform: translateX(39px) rotate(240deg) ;
+    text-align: center;
+    line-height: 35px;
+    font-size: 1.6rem;
+    color: rgb(221, 219, 171);
+    transition: all 0.5s ease-in-out;
+    text-shadow: 1px 2px 9px yellow , -2px -1.19px 2px black ;
+}
+
+.dark {
+    background-color: #121212;
+}
+
+/* REAL TIME CONTAINER PART ################################ */
+.time-container {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: bold;
+    text-align: center;
+    border-bottom: 1px solid black;
+    background-color: rgb(223, 216, 216);
+    transition: all 0.5s ease-in-out;
+}
+/* MAIN CONTENT PART HERE ################################# */
+body {
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
+    background-color: white;
+}
+.main-container {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-top: 150px;
+}
+.secondry-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    font-size: 2rem;
+    padding: 50px;
+    width: 50rem;
+    border-radius: 10px;
+}
+.search-container {
+  display: flex;
+}
+#input-value {
+    border-top-left-radius:5px;
+    border-bottom-left-radius: 5px;
+    width: 500px;
+    height: 40px;
+    border-right: none;
+    font-size: 1.6rem;
+    font-style: bold;
+    padding: 5px;
+    text-transform: capitalize;
+}
+#search-btn {
+    width: 9rem;
+    height: 40px;
+    font-size: 1.5rem;
+    border-top-right-radius:5px;
+    border-bottom-right-radius: 5px;
+    background-color: orange;
+    cursor: pointer;
+}
+ .area-container {
+    display: inline;
+    font-size: 1rem;
+    text-align: left;
+ }
+ .temp-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 650px;
+    margin-top: 20px;
+ }
+ .content-container {
+    margin-top: 10px;
+    padding: 5px;
+ }
+ .last-part {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+#gps {
+    font-size: 1rem;
+    padding: 2px 5px 2px 5px;  
+    background-color: white;  
+    border-radius: 5px;
+    border: 1px solid black;
+    font-style: bold;
+    box-shadow: 2px 2px 2px grey;
+    cursor: pointer;
+}
+#gps:hover {
+    background-color: rgb(237, 236, 236);
+}
+#gps:active {
+    background-color: rgb(218, 194, 194);
+    box-shadow: 0.5px 0.5px 0.5px grey;
+}
+
+
+@media (max-width: 850px) {
+    .secondry-container {
+        font-size: 1rem;
+        padding: 30px;
+        width: 40rem;     
+    }
+    #input-value {
+        width: 400px;
+        font-size: 1.2rem;
+    }
+    #search-btn {
+        width: 8rem;
+        font-size: 1.3rem;
+    }
+    .temp-time {
+        width: 530px;
+        margin-top: 10px;
+    }
+    .content-container {
+        margin-top: 5px;
+        padding: 1px;
+    }
+     .last-part {
+        width: 100%;
+        margin-top: 9px;
+        font-size: 2rem;
+    }
+    #gps {
+        font-size: 1rem;
+        padding: 2px 5px 2px 5px;  
+    }
+    .main-container {
+        margin-top: 120px;
+    }    
+}
+@media (max-width: 850px) {
+    .secondry-container {
+        font-size: 1rem;
+        padding: 30px;
+        width: 40rem;     
+    }
+    #input-value {
+        width: 400px;
+        font-size: 1.2rem;
+    }
+    #search-btn {
+        width: 8rem;
+        font-size: 1.3rem;
+    }
+    .temp-time {
+        width: 530px;
+        margin-top: 10px;
+    }
+    .content-container {
+        margin-top: 5px;
+        padding: 1px;
+    }
+     .last-part {
+        width: 100%;
+        margin-top: 9px;
+        font-size: 2rem;
+    }
+    #gps {
+        font-size: 1rem;
+        padding: 2px 5px 2px 5px;  
+    }
+    .main-container {
+        margin-top: 120px;
+    }    
+}
+@media (max-width: 650px) {
+    .secondry-container {
+        font-size: 1rem;
+        padding: 40px;
+        width: 35rem; 
+    }
+    #input-value {
+        width: 350px;
+        font-size: 1rem;
+    }
+    #search-btn {
+        width: 6.5rem;
+        font-size: 1.1rem;
+    }
+    .temp-time {
+        width: 490px;
+        margin-top: 10px;
+    }
+    #name {
+        font-size: 2.1rem;
+    }
+    #country {
+        font-size: 2.4rem;
+    }
+    #time {
+        margin-left: 20px;
+        font-size: 1.6rem;
+    }
+    #temp {
+        font-size: 1.6rem;
+    }
+    .content-container {
+        margin-top: 1px;
+        padding: 10px;
+    }
+     .last-part {
+        width: 100%;
+        margin-top: 1px;
+        font-size: 2rem;
+    }
+    #gps {
+        font-size: 1rem;
+        padding: 2px 5px 2px 5px;  
+    }
+    .main-container {
+        margin-top: 60px;
+    }    
+}
+@media (max-width: 570px) {
+    .secondry-container {
+        font-size: 0.5rem;
+        padding: 30px;
+        width: 30rem; 
+    }
+    #input-value {
+        width: 320px;
+        font-size: 1rem;
+    }
+    #search-btn {
+        width: 6rem;
+        font-size: 1.1rem;
+    }
+    .temp-time {
+        width: 450px;
+        margin-top: 10px;
+    }
+    #name {
+        font-size: 1.9rem;
+    }
+    #country {
+        font-size: 2.2rem;
+    }
+    #time {
+        margin-left: 5px;
+        font-size: 1.5rem;
+    }
+    #temp {
+        font-size: 1.5rem;
+    }
+    .content-container {
+        margin-top: 1px;
+        padding: 10px;
+    }
+     .last-part {
+        width: 100%;
+        margin-top: 1px;
+        font-size: 1.8rem;
+    }
+    #gps {
+        font-size: 1rem;
+        padding: 2px 5px 2px 5px;  
+    }
+    .main-container {
+        margin-top: 60px;
+    }    
+}
+@media (max-width: 490px) {
+    .secondry-container {
+        font-size: 0.5rem;
+        padding: 30px;
+        width: 25rem; 
+    }
+    #input-value {
+        width: 250px;
+        font-size: 1rem;
+    }
+    #search-btn {
+        width: 6rem;
+        font-size: 1.1rem;
+    }
+    .temp-time {
+        width: 350px;
+        margin-top: 10px;
+    }
+    #name {
+        font-size: 1.5rem;
+    }
+    #country {
+        font-size: 1.9rem;
+    }
+    #time {
+        margin-left: 5px;
+        font-size: 1.3rem;
+    }
+    #temp {
+        font-size: 1.3rem;
+    }
+    .content-container {
+        margin-top: 1px;
+        padding: 10px;
+    }
+     .last-part {
+        width: 100%;
+        margin-top: 1px;
+        font-size: 1.6rem;
+    }
+    #gps {
+        font-size: 1rem;
+        padding: 2px 5px 2px 5px;  
+    }
+    .main-container {
+        margin-top: 60px;
+    }    
+}
+@media (max-width: 420px) {
+    .secondry-container {
+        font-size: 0.5rem;
+        padding: 30px;
+        width: 20rem; 
+    }
+    #input-value {
+        width: 200px;
+        font-size: 0.89rem;
+    }
+    #search-btn {
+        width: 5rem;
+        font-size: 0.9rem;
+    }
+    .temp-time {
+        width: 280px;
+        margin-top: 10px;
+    }
+    #name {
+        font-size: 1.2rem;
+    }
+    #country {
+        font-size: 1.5rem;
+    }
+    #time {
+        margin-left: 5px;
+        font-size: 1.05rem;
+    }
+    #temp {
+        font-size: 1.15rem;
+    }
+    .content-container {
+        margin-top: 1px;
+        padding: 9px;
+    }
+     .last-part {
+        width: 100%;
+        margin-top: 1px;
+        font-size: 1.4rem;
+    }
+    #gps {
+        font-size: 0.9rem;
+        padding: 2px 5px 2px 5px; 
+    }
+    .main-container {
+        margin-top: 60px;
+    }    
+}
