@@ -22,7 +22,7 @@ let isDay = document.querySelector("#day");
 
 // WHEATHER API LOGIC#################################
 async function weatherDetail(location) {
-    let promise1 = await fetch(`http://api.weatherapi.com/v1/current.json?key=8bc0a6a835854df5926110236241305&q=${location}&aqi=yes`);
+    let promise1 = await fetch(`https://api.weatherapi.com/v1/current.json?key=8bc0a6a835854df5926110236241305&q=${location}&aqi=yes`);
     let promise2 = await promise1.json();
     cName.innerText =  `${promise2.location.name}-${promise2.location.region}`;
     country.innerText = promise2.location.country;
@@ -61,7 +61,7 @@ input.addEventListener("keyup", async (e) => {
 
 // GPS PART LOGIC########################################
 async function gpsLocation(lat, long) {
-    let promiseGps1 = await fetch(`http://api.weatherapi.com/v1/current.json?key=8bc0a6a835854df5926110236241305&q=${lat},${long}&aqi=yes`);
+    let promiseGps1 = await fetch(`https://api.weatherapi.com/v1/current.json?key=8bc0a6a835854df5926110236241305&q=${lat},${long}&aqi=yes`);
     let promiseGps2 = await promiseGps1.json();
     cName.innerText =  `${promiseGps2.location.name}-${promiseGps2.location.region}`;
     country.innerText = promiseGps2.location.country;
